@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:health_tracker/common/color_extension.dart';
 import 'package:health_tracker/common_widget/on_boarding_page.dart';
+import 'package:health_tracker/view/login/sign_up_view.dart';
 
 class OnBoardingView extends StatefulWidget {
   const OnBoardingView({super.key});
@@ -100,9 +101,13 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                               curve: Curves.easeInOut);
                           // controller.jumpToPage(selectedPage);
                           // Open Welcome Screen
-                        } else {
+                        } else  {
                           // Open Welcome Screen
-                          print("Open Welcome Screen");
+                          // print("Open Welcome Screen");
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SignUpView()));
                         }
                       },
                     ),
